@@ -5,4 +5,5 @@ body.chakra-ui-light {
     background: black;
     width: 100%;
     max-width: 100%;
+    padding-bottom: 2em;
 }
