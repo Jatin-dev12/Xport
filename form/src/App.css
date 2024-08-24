@@ -1,0 +1,20 @@
+body.chakra-ui-light {
+  justify-content: center;
+}
+.chakra-container.Main.css-2nms2f {
+  background: #dadadf;
+  width: 100%;
+  max-width: 100%;
+  padding-bottom: 2em;
+}
+.css-10xq6jt {
+  font-size: var(--chakra-fontSizes-4xl);
+  line-height: 1.2;
+}
+.chakra-stack.css-1f0wxn3 {
+  gap: 2em !important;
+  justify-content: center;
+}
+h2.chakra-heading.css-10xq6jt {
+  color: black;
+}

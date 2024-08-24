@@ -1,8 +1,9 @@
-  import './App.css';
-import Layout from './Layout';
+import './App.css';
+import Layout from './layout';
 import { BrowserRouter , Routes , Route } from 'react-router-dom';
-import Data from '../../form/src/Pages/Data';
-import Form from '../../form/src/Pages/Form';
+import Data from './Pages/Data';
+import Form from './Pages/Form';
+import  Line  from './Pages/Line';
 
 function App() {
   // const isAuthenticated = false; // Set this to true if the user is authenticated
@@ -17,6 +18,8 @@ function App() {
       <Route path="/" element={<Layout />}>
         <Route index element={<Form/>} />
         <Route path="Data" element={<Data />} />
+        <Route path="Line" element={<Line />} />
+
       
       </Route>
     
