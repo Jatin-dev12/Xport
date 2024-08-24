@@ -5,6 +5,7 @@ import { Container, Box, Button } from '@chakra-ui/react';
 import { initializeApp } from 'firebase/app';
 import { getFirestore, collection, addDoc } from 'firebase/firestore';
 import { useToast } from '@chakra-ui/react'
+import { useNavigate } from 'react-router-dom';
 
 // Firebase configuration
 const firebaseConfig = {
@@ -34,7 +35,7 @@ function Form() {
   const [value10, setValue10] = useState('');
   const [value11, setValue11] = useState('');
   const [value12, setValue12] = useState('');
-
+  const navigate = useNavigate();
   const toast = useToast()
 
   const handleSubmit = async () => {
@@ -69,6 +70,8 @@ function Form() {
       setValue11('');
       setValue12('');
 
+      
+
     } catch (e) {
       console.error("Error adding document: ", e);
       toast({
@@ -80,15 +83,13 @@ function Form() {
       });
     }
   };
-
+  const jatin = () => {navigate('/Data');}
   return (
 
     <>
       <Container maxW='2xl' className='Main' centerContent  >
         <Card>
-          <CardBody>
-            <Text>View a summary of all your customers over the last month.</Text>
-          </CardBody>
+         
         </Card>
         <Heading size='xl' mt={5} color={'white'}> Please Select The Option For Ratings</Heading>
         <Box>
@@ -294,8 +295,15 @@ function Form() {
               </RadioGroup>
             </CardBody>
           </Card>
-        </Box>
+        </Box >
+        <Box>
         <Button size='lg' colorScheme='blue' onClick={handleSubmit}>Submit</Button>
+
+        <Button size='lg' colorScheme='gray' onClick={jatin}>See Results</Button>
+</Box>
+
+
+
       </Container>
     </>
   );
