@@ -1,23 +1,101 @@
+*{
+  -webkit-tap-highlight-color: transparent;
+}
 body.chakra-ui-light {
-  justify-content: center;
+    justify-content: center;
+  }
+  .chakra-container.Main.css-2nms2f {
+    background: #dadadf;
+    width: 100%;
+    max-width: 100%;
+    padding-bottom: 2em;
+  }
+  .css-10xq6jt {
+    font-size: var(--chakra-fontSizes-4xl);
+    line-height: 1.2;
+  }
+  .chakra-stack.css-1f0wxn3 {
+    gap: 2em !important;
+    justify-content: center;
+  }
+  h2.chakra-heading.css-10xq6jt {
+    color: black;
+  }
+  button.chakra-button.css-1xtfdg5 {
+    margin-right: 3em;
+  }
+
+  .chakra-container.Main.css-2nms2f {
+    background: #eaefef;
+  
 }
 .chakra-container.Main.css-2nms2f {
-  background: #dadadf;
-  width: 100%;
-  max-width: 100%;
-  padding-bottom: 2em;
+  
+    padding: 2vw 26vw;
+ }
+ h2.chakra-heading.css-10xq6jt {
+     font-size: 24pt;
+     line-height: 1.25;
+     letter-spacing: 0;
+ }
+ h2.chakra-heading.css-18j379d {
+     font-weight: 400;
+     font-size: 12pt;
+     line-height: 1.5;
+     letter-spacing: 0;
+     color: rgb(32, 33, 36);
+ }
+ label.chakra-radio.css-1cqh9jq {
+     display: flex;
+     flex-direction: column-reverse;
+     row-gap: 1.5rem;
+    
+ }
+ span.chakra-radio__label.css-1cgf557 {
+     margin: 0;
+ }
+ .chakra-card__header.css-rd241d {
+     padding: 1.5rem 1.5rem 0.5rem;
+ }
+
+
+
+ span.chakra-radio__control:hover {
+  transform: scale(1.2);
+  background-color: rgba(26,115,232,.04);
 }
-.css-10xq6jt {
-  font-size: var(--chakra-fontSizes-4xl);
-  line-height: 1.2;
+
+span.chakra-radio__control {
+  transition: .2s ease;
 }
-.chakra-stack.css-1f0wxn3 {
-  gap: 2em !important;
-  justify-content: center;
-}
-h2.chakra-heading.css-10xq6jt {
-  color: black;
-}
-button.chakra-button.css-1xtfdg5 {
-  margin-right: 3em;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+ @media(max-width:768px){
+ .chakra-container.Main.css-2nms2f {
+    
+     padding: 2vw 4.5vw;
+ }
+ /* .chakra-stack.css-1f0wxn3 {
+     display: inline-block;
+ } */
+ /* label.chakra-radio.css-1cqh9jq {
+   
+     flex-direction: row-reverse;
+        padding-bottom: 1.3rem;
+     column-gap: 1.3rem;
+ } */
+ /* .chakra-stack.css-1f0wxn3 {
+   
+     padding-left: 2rem;
+ } */
+ }

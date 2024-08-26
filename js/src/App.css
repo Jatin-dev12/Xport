@@ -1,9 +1,116 @@
-body.chakra-ui-light {
-    justify-content: center;
+* {
+  -webkit-tap-highlight-color: transparent;
 }
+
+body.chakra-ui-light {
+  justify-content: center;
+}
+
 .chakra-container.Main.css-2nms2f {
-    background: black;
-    width: 100%;
-    max-width: 100%;
-    padding-bottom: 2em;
+  background: #eaefef;
+  width: 100%;
+  max-width: 100%;
+  padding-bottom: 2em;
+}
+
+.css-10xq6jt {
+  font-size: var(--chakra-fontSizes-4xl);
+  line-height: 1.2;
+}
+
+.chakra-stack.css-1f0wxn3 {
+  gap:3em !important;
+  justify-content: center;
+}
+
+h2.chakra-heading.css-10xq6jt {
+  color: black;
+}
+
+span.chakra-radio__control {
+  transition: .2s ease;
+  height: 25px;
+  width: 25px;
+}
+.chakra-card__body.css-1idwstw {
+  margin-bottom: 10px;
+}
+
+
+
+.chakra-container.Main.css-2nms2f {
+
+  padding: 2vw 26vw;
+}
+
+h2.chakra-heading.css-10xq6jt {
+  font-size: 24pt;
+  line-height: 1.25;
+  letter-spacing: 0;
+}
+
+h2.chakra-heading.css-18j379d {
+  font-weight: 500;
+  font-size: 13pt;
+  line-height: 1.5;
+  letter-spacing: 0;
+  color: rgb(32, 33, 36);
+}
+
+label.chakra-radio.css-1cqh9jq {
+  display: flex;
+  flex-direction: column-reverse;
+  row-gap: 1.5rem;
+
+}
+
+span.chakra-radio__label.css-1cgf557 {
+  margin: 0;
+  font-weight: 500;
+
+}
+
+.chakra-card__header.css-rd241d {
+  padding: 1.5rem 1.5rem 0.5rem;
+}
+
+
+
+span.chakra-radio__control:hover {
+  box-shadow: 0 0 0 5px #a09f9f2a;
+}
+
+span.chakra-radio__control {
+  transition: .2s ease;
+}
+
+
+
+@media(max-width:768px) {
+  .chakra-container.Main.css-2nms2f {
+
+    padding: 2vw 4.5vw;
+  }
+
+  /* .chakra-stack.css-1f0wxn3 {
+     display: inline-block;
+ } */
+  /* label.chakra-radio.css-1cqh9jq {
+   
+     flex-direction: row-reverse;
+        padding-bottom: 1.3rem;
+     column-gap: 1.3rem;
+ } */
+  /* .chakra-stack.css-1f0wxn3 {
+   
+     padding-left: 2rem;
+ } */
+}button.chakra-button.css-1xtfdg5 {
+  padding: 25px 35px;
+}
+.bro {
+  display: flex;
+  justify-content: center !important ;
+  align-items: center;
+  align-content: center;
 }
