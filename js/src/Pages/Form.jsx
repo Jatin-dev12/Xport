@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Radio, RadioGroup, Stack } from '@chakra-ui/react';
-import { Card, CardHeader, CardBody, Heading, StackDivider } from '@chakra-ui/react';
+import { Card, CardHeader, CardBody, Heading, StackDivider} from '@chakra-ui/react';
 import { Container, Box, Button } from '@chakra-ui/react';
 import { initializeApp } from 'firebase/app';
 import { getFirestore, collection, addDoc } from 'firebase/firestore';
@@ -38,83 +38,62 @@ function Form() {
   // const navigate = useNavigate();
   const toast = useToast()
 
-  const handleSubmit = async () => {
-    if (
-      value &&
-      value2 &&
-      value3 &&
-      value4 &&
-      value5 &&
-      value6 &&
-      value7 &&
-      value8 &&
-      value9 &&
-      value10 &&
-      value11 &&
-      value12
-    ) {
-      const data = {
-        card1: value,
-        card2: value2,
-        card3: value3,
-        card4: value4,
-        card5: value5,
-        card6: value6,
-        card7: value7,
-        card8: value8,
-        card9: value9,
-        card10: value10,
-        card11: value11,
-        card12: value12,
-      };
-  
-      try {
-        const docRef = await addDoc(collection(db, "Jatin"), data);
-        console.log("Document written with ID: ", docRef.id);
-        toast({
-          title: "Submission Successful",
-          description: "Your selections have been recorded.",
-          status: "success",
-          duration: 5000,
-          isClosable: true,
-          position: "top",
-
-        });
-        setValue('');
-        setValue2('');
-        setValue3('');
-        setValue4('');
-        setValue5('');
-        setValue6('');
-        setValue7('');
-        setValue8('');
-        setValue9('');
-        setValue10('');
-        setValue11('');
-        setValue12('');
-      } catch (e) {
-        console.error("Error adding document: ", e);
-        toast({
-          title: "Submission Failed",
-          description: "There was an error submitting your selections. Please try again.",
-          status: "error",
-          duration: 5000,
-          isClosable: true,
-          position: "top",
-
-        });
-      }
-    } else {
-      toast({
-        title: "Please select all fields",
-        description: "You must select a value for all fields before submitting.",
-        status: "error",
-        duration: 5000,
-        isClosable: true,
-        position: "top",
-      });
-    }
+const handleSubmit = async () => {
+  const data = {
+    card1: value,
+    card2: value2,
+    card3: value3,
+    card4: value4,
+    card5: value5,
+    card6: value6,
+    card7: value7,
+    card8: value8,
+    card9: value9,
+    card10: value10,
+    card11: value11,
+    card12: value12,
   };
+
+  try {
+    const docRef = await addDoc(collection(db, "Jatin"), data);
+    console.log("Document written with ID: ", docRef.id);
+    toast({
+      title: "Submission Successful",
+      description: "Your selections have been recorded.",
+      status: "success",
+      duration: 5000,
+      isClosable: true,
+    });
+
+    // Store the latest document ID
+    localStorage.setItem('docId', docRef.id);
+
+    // Clear form values
+    setValue('');
+    setValue2('');
+    setValue3('');
+    setValue4('');
+    setValue5('');
+    setValue6('');
+    setValue7('');
+    setValue8('');
+    setValue9('');
+    setValue10('');
+    setValue11('');
+    setValue12('');
+
+  } catch (e) {
+    console.error("Error adding document: ", e);
+    toast({
+      title: "Submission Failed",
+      description: "There was an error submitting your selections. Please try again.",
+      status: "error",
+      duration: 5000,
+      isClosable: true,
+    });
+  }
+};
+
   // const jatin = () => {navigate('/Data');}
   return (
 
@@ -137,7 +116,7 @@ function Form() {
                     <Radio size='lg' value='2' colorScheme='orange'>2</Radio>
                     <Radio size='lg' value='3' colorScheme='blue'>3</Radio>
                     <Radio size='lg' value='4' colorScheme='green'>4</Radio>
-                    <Radio size='lg' value='5' colorScheme='yellow'>5</Radio>
+                    <Radio size='lg' value='5' colorScheme='teal'>5</Radio>
                   </Stack>
                 </RadioGroup>
               </CardBody>
@@ -154,7 +133,7 @@ function Form() {
                   <Radio size='lg' value='2' colorScheme='orange'>2</Radio>
                   <Radio size='lg' value='3' colorScheme='blue'>3</Radio>
                   <Radio size='lg' value='4' colorScheme='green'>4</Radio>
-                  <Radio size='lg' value='5' colorScheme='yellow'>5</Radio>
+                  <Radio size='lg' value='5' colorScheme='teal'>5</Radio>
                 </Stack>
               </RadioGroup>
             </CardBody>
@@ -170,7 +149,7 @@ function Form() {
                   <Radio size='lg' value='2' colorScheme='orange'>2</Radio>
                   <Radio size='lg' value='3' colorScheme='blue'>3</Radio>
                   <Radio size='lg' value='4' colorScheme='green'>4</Radio>
-                  <Radio size='lg' value='5' colorScheme='yellow'>5</Radio>
+                  <Radio size='lg' value='5' colorScheme='teal'>5</Radio>
                 </Stack>
               </RadioGroup>
             </CardBody>
@@ -186,7 +165,7 @@ function Form() {
                   <Radio size='lg' value='2' colorScheme='orange'>2</Radio>
                   <Radio size='lg' value='3' colorScheme='blue'>3</Radio>
                   <Radio size='lg' value='4' colorScheme='green'>4</Radio>
-                  <Radio size='lg' value='5' colorScheme='yellow'>5</Radio>
+                  <Radio size='lg' value='5' colorScheme='teal'>5</Radio>
                 </Stack>
               </RadioGroup>
             </CardBody>
@@ -202,7 +181,7 @@ function Form() {
                   <Radio size='lg' value='2' colorScheme='orange'>2</Radio>
                   <Radio size='lg' value='3' colorScheme='blue'>3</Radio>
                   <Radio size='lg' value='4' colorScheme='green'>4</Radio>
-                  <Radio size='lg' value='5' colorScheme='yellow'>5</Radio>
+                  <Radio size='lg' value='5' colorScheme='teal'>5</Radio>
 
                 </Stack>
               </RadioGroup>
@@ -219,7 +198,7 @@ function Form() {
                   <Radio size='lg' value='2' colorScheme='orange'>2</Radio>
                   <Radio size='lg' value='3' colorScheme='blue'>3</Radio>
                   <Radio size='lg' value='4' colorScheme='green'>4</Radio>
-                  <Radio size='lg' value='5' colorScheme='yellow'>5</Radio>
+                  <Radio size='lg' value='5' colorScheme='teal'>5</Radio>
 
                 </Stack>
               </RadioGroup>
@@ -236,7 +215,7 @@ function Form() {
                   <Radio size='lg' value='2' colorScheme='orange'>2</Radio>
                   <Radio size='lg' value='3' colorScheme='blue'>3</Radio>
                   <Radio size='lg' value='4' colorScheme='green'>4</Radio>
-                  <Radio size='lg' value='5' colorScheme='yellow'>5</Radio>
+                  <Radio size='lg' value='5' colorScheme='teal'>5</Radio>
 
                 </Stack>
               </RadioGroup>
@@ -253,7 +232,7 @@ function Form() {
                   <Radio size='lg' value='2' colorScheme='orange'>2</Radio>
                   <Radio size='lg' value='3' colorScheme='blue'>3</Radio>
                   <Radio size='lg' value='4' colorScheme='green'>4</Radio>
-                  <Radio size='lg' value='5' colorScheme='yellow'>5</Radio>
+                  <Radio size='lg' value='5' colorScheme='teal'>5</Radio>
 
                 </Stack>
               </RadioGroup>
@@ -270,7 +249,7 @@ function Form() {
                   <Radio size='lg' value='2' colorScheme='orange'>2</Radio>
                   <Radio size='lg' value='3' colorScheme='blue'>3</Radio>
                   <Radio size='lg' value='4' colorScheme='green'>4</Radio>
-                  <Radio size='lg' value='5' colorScheme='yellow'>5</Radio>
+                  <Radio size='lg' value='5' colorScheme='teal'>5</Radio>
 
                 </Stack>
               </RadioGroup>
@@ -287,7 +266,7 @@ function Form() {
                   <Radio size='lg' value='2' colorScheme='orange'>2</Radio>
                   <Radio size='lg' value='3' colorScheme='blue'>3</Radio>
                   <Radio size='lg' value='4' colorScheme='green'>4</Radio>
-                  <Radio size='lg' value='5' colorScheme='yellow'>5</Radio>
+                  <Radio size='lg' value='5' colorScheme='teal'>5</Radio>
 
                 </Stack>
               </RadioGroup>
@@ -304,7 +283,7 @@ function Form() {
                   <Radio size='lg' value='2' colorScheme='orange'>2</Radio>
                   <Radio size='lg' value='3' colorScheme='blue'>3</Radio>
                   <Radio size='lg' value='4' colorScheme='green'>4</Radio>
-                  <Radio size='lg' value='5' colorScheme='yellow'>5</Radio>
+                  <Radio size='lg' value='5' colorScheme='teal'>5</Radio>
 
                 </Stack>
               </RadioGroup>
@@ -321,7 +300,7 @@ function Form() {
                   <Radio size='lg' value='2' colorScheme='orange'>2</Radio>
                   <Radio size='lg' value='3' colorScheme='blue'>3</Radio>
                   <Radio size='lg' value='4' colorScheme='green'>4</Radio>
-                  <Radio size='lg' value='5' colorScheme='yellow'>5</Radio>
+                  <Radio size='lg' value='5' colorScheme='teal'>5</Radio>
 
                 </Stack>
               </RadioGroup>
@@ -331,7 +310,7 @@ function Form() {
         <Box>
         <Button size='lg' colorScheme='blue' onClick={handleSubmit}>Submit</Button>
 
-        {/* <Button size='lg' colorScheme='green' onClick={jatin}>See Results</Button> */}
+        {/* <Button size='lg' colorScheme='gray' onClick={jatin}>See Results</Button> */}
 </Box>
 
 

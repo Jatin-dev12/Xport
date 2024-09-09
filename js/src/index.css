@@ -1,0 +1,47 @@
+.bro {
+  display: flex;
+  justify-content: center !important;
+  align-items: center;
+  align-content: center;
+  padding: 2em;
+}
+
+canvas {
+  height: 600px !important;
+
+}
+
+ul {
+  padding: 15px;
+}
+
+.cardsname {
+  font-size: 20px !important;
+  font-weight: 600 !important;
+  color: black !important;
+}
+
+.new:hover {
+  transform: scale(1.03) !important;
+}
+
+.new {
+  transition: .3s all ease;
+}
+
+
+@media(max-width:500px) {
+  .css-1cljlts {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.css-1pn0a75:hover {
+  transform: scale(1.02);
+  box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.3), 0 8px 17px rgba(0, 158, 253, 0.3), 0 4px 3px rgba(0, 254, 244, 0.3)
+}
+
+.css-1pn0a75 {
+  transition: .3s all ease;
+
+}
